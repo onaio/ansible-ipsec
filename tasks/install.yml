@@ -1,0 +1,13 @@
+---
+
+- name: Install Strongswan package
+  apt:
+    name: strongswan
+    state: present
+
+- name: Enable IPSEC Service
+  service:
+    name: ipsec
+    enabled: true
+  notify:
+    - restart IPSEC

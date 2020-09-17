@@ -1,0 +1,29 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    ipsec_conn_groups:
+      group1:
+        right: "10.10.10.9"
+        rightsubnet: "192.168.10.0/24"
+        ike: "aes256-sha1-modp1024"
+        esp: "aes256-sha1-modp1024"
+        auto: "start"
+      group2:
+        authby: "secret"
+        keyexchange: "ikev1"
+        left: "%defaultroute"
+        leftid: "3.7.150.3"
+        leftsubnet: "142.40.37.8/32"
+        right: "11.2.1.0"
+        rightsubnet: "192.168.1.10/32"
+        auto: "route"
+        ike: "aes256-sha1-modp1024"
+        esp: "aes256-sha1-modp1024"
+    ipsec_secrets:
+      - right: "11.2.1.0"
+        left: "3.7.150.3"
+        type: "PSK"
+        credentials: "presharedpassword"
+  roles:
+    - role: onaio.ipsec

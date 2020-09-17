@@ -1,0 +1,14 @@
+---
+- name: Copy IPSEC main configuration
+  template:
+    src: "templates/etc/ipsec.conf.j2"
+    dest: "/etc/ipsec.conf"
+  notify:
+    - Restart IPSEC
+
+- name: Copy IPSEC secret file
+  template:
+    src: "templates/etc/ipsec.secrets.j2"
+    dest: "/etc/ipsec.secrets"
+  notify:
+    - Restart IPSEC

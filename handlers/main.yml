@@ -1,0 +1,5 @@
+---
+- name: Restart IPSEC
+  service:
+    name: ipsec
+    state: restarted

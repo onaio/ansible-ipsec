@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Ona Tech
+  description: Installs Strongswan and configures IPSEC
+  company: Ona Systems Inc
+  license: Apache V2
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 16.04
+        - 18.04
+  galaxy_tags:
+    - Strongswan
+    - IPSEC
+dependencies: []

@@ -1,0 +1,47 @@
+---
+ipsec_config_setup:
+  uniqueids: 'yes'
+  charonstart: 'yes'
+  charondebug: ''
+
+ipsec_conn_default: {}
+
+ipsec_conn_groups: {}
+# Example
+# ipsec_conn_groups:
+#   group1:
+#     right: "10.10.10.9"
+#     rightsubnet: "192.168.10.0/24"
+#     ike: "aes256-sha1-modp1024"
+#     esp: "aes256-sha1-modp1024"
+#     auto: "start"
+#
+#   group2:
+#     authby: "secret"
+#     keyexchange: "ikev1"
+#     left: "%defaultroute"
+#     leftid: "3.7.150.3"
+#     leftsubnet: "142.40.37.8/32"
+#     right: "11.2.1.0"
+#     rightsubnet: "192.168.1.10/32"
+#     auto: "route"
+#     ike: "aes256-sha1-modp1024"
+#     esp: "aes256-sha1-modp1024"
+# Connection parameter docs can be found here https://wiki.strongswan.org/projects/strongswan/wiki/ConnSection
+
+ipsec_secrets: []
+# ipsec_secrets: List of secrets to define
+#  A list that contains the following attributes:
+#     left:      Any valid ID selector. (optional)
+#     right:     Any valid ID selector
+#     type:       Optional (defaults to PSK) - any valid secret type
+#     credentials: Required - Connection's credentials, e.g the preshared password
+#
+# A selector is an IP address, a Fully Qualified Domain Name, user@FQDN, %any or %any6.
+#
+#  strongswan_secrets:
+#    - left: 1.2.3.4
+#      right: 2.3.4.5
+#      type: PSK
+#       credentials: '"some private PSK here"'
+# Secrets docs can be found here https://wiki.strongswan.org/projects/strongswan/wiki/IpsecSecrets
