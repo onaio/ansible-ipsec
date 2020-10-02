@@ -26,4 +26,4 @@
         type: "PSK"
         credentials: "presharedpassword"
   roles:
-    - role: onaio.ipsec
+    - role: ansible-ipsec
