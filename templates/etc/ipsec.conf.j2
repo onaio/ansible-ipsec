@@ -9,8 +9,8 @@ conn %default
 {% for key,value in ipsec_conn_default.items() %}
   {{key}}={{value}}
 {% endfor %}
-{% endif %}
 
+{% endif %}
 {% for group,group_parameters in ipsec_conn_groups.items() %}
 conn {{ group }}
 {% for key,value in group_parameters.items() %}

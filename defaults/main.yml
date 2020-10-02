@@ -1,8 +1,6 @@
 ---
 ipsec_config_setup:
   uniqueids: 'yes'
-  charonstart: 'yes'
-  charondebug: ''
 
 ipsec_conn_default: {}
 
