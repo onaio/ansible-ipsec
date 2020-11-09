@@ -26,6 +26,7 @@ def test_files(host, path, user, group):
     assert f.user == user
     assert f.group == group
 
+
 @pytest.mark.parametrize("name", ["ipsec", "monit"])
 def test_services(host, name):
     service = host.service(name)
