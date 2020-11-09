@@ -25,5 +25,13 @@
         left: "3.7.150.3"
         type: "PSK"
         credentials: "presharedpassword"
+    ipsec_monit_setup_mode: true
+    ipsec_monit_ipsec_hosts:
+      - name: ipsec_test
+        address: "8.8.8.8"
+        exec_scripts:
+          - opsgenie-notification
+    ipsec_monit_opsgenie_api_key: "12345qweqas"
+    ipsec_slack_monit_endpoint: "121adasxa12"
   roles:
     - role: ansible-ipsec
