@@ -43,3 +43,14 @@ ipsec_secrets: []
 #      type: PSK
 #       credentials: '"some private PSK here"'
 # Secrets docs can be found here https://wiki.strongswan.org/projects/strongswan/wiki/IpsecSecrets
+
+# Monit configuration
+ipsec_monit_setup_mode: false
+ipsec_monit_ipsec_hosts: []
+# ipsec_monit_ipsec_hosts:
+#   - name: ipsec_orange  # name of the IPSEC connection
+#     address: "10.123.23.2"  # the IPv4, IPv6 or hostname to ping to
+#     exec_scripts:  # list of names of scripts to execute when ping fails
+#       - opsgenie-notification
+ipsec_monit_opsgenie_api_key: ""
+ipsec_slack_monit_endpoint: ""
