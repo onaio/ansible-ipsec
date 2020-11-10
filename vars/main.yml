@@ -1,2 +1,2 @@
 ---
-# vars file for IPSEC
+ipsec_monit_scripts: ["monit", "ipsec"]

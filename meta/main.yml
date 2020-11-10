@@ -11,6 +11,14 @@ galaxy_info:
         - 16.04
         - 18.04
   galaxy_tags:
-    - Strongswan
-    - IPSEC
-dependencies: []
+    - strongswan
+    - ipsec
+dependencies:
+  - role: onaio.monit
+    vars:
+      monit_scripts: "{{ ipsec_monit_scripts }}"
+      monit_setup_mode: "{{ ipsec_monit_setup_mode }}"
+      monit_ipsec_hosts: "{{ ipsec_monit_ipsec_hosts }}"
+      monit_opsgenie_api_key: "{{ ipsec_monit_opsgenie_api_key }}"
+      slack_monit_endpoint: "{{ ipsec_slack_monit_endpoint }}"
+    when: ipsec_enable_monit
