@@ -45,6 +45,7 @@ ipsec_secrets: []
 # Secrets docs can be found here https://wiki.strongswan.org/projects/strongswan/wiki/IpsecSecrets
 
 # Monit configuration
+ipsec_enable_monit: true
 ipsec_monit_setup_mode: false
 ipsec_monit_ipsec_hosts: []
 # ipsec_monit_ipsec_hosts:
