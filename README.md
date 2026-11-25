@@ -8,6 +8,11 @@ Requirements
 
 The role has been developed and tested on Debian/Ubuntu 18.0.4
 
+The controller requires Ansible 2.10 or newer. Task imports, restart
+notifications and template rendering were checked locally with ansible-core
+2.20. Package and service actions were mocked. These checks do not validate
+a running VPN on a new Ubuntu release.
+
 Role Variables
 --------------
 These are the role variables and default values
@@ -89,7 +94,8 @@ ipsec_secrets:
 Dependencies
 ------------
 
-None.
+`onaio.monit` must be available on the controller. Its tasks run only when
+`ipsec_enable_monit` is true.
 
 Example Playbook
 ----------------

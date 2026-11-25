@@ -10,4 +10,4 @@
     name: ipsec
     enabled: true
   notify:
-    - restart IPSEC
+    - Restart IPSEC
